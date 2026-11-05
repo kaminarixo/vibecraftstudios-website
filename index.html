@@ -3,59 +3,130 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>vibecraftstudios – AI anime music</title>
-  <meta name="description" content="vibecraftstudios is an AI anime music channel with three virtual artists: Mira Nyx, Nova Jade and Layla Star. New tracks every Monday, Wednesday and Friday at 18:30 CET, lofi instrumentals on Sundays.">
+  <title>vibecraftstudios – anime music, four sides a week</title>
+  <meta name="description" content="vibecraftstudios is an independent anime music channel with three virtual artists – Mira Nyx, Nova Jade and Layla Star – plus a lofi instrumental every Sunday. New sides Monday, Wednesday, Friday and Sunday at 18:30 CET.">
+  <meta name="theme-color" content="#0d0c0b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site">
-    <div class="wrap"><a class="brand" href="/">vibecraftstudios</a></div>
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="fallback-record" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="mark" href="/" aria-label="vibecraftstudios – start">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#1b1916"/><circle cx="32" cy="32" r="22" fill="none" stroke="#3a3631" stroke-width="1.5"/><circle cx="32" cy="32" r="11" fill="currentColor" style="color: var(--accent)"/><circle cx="32" cy="32" r="2.4" fill="#0d0c0b"/></svg>
+      vibecraftstudios
+    </a>
+    <nav aria-label="Sections">
+      <span class="sides"><a href="#side-a"><b>A</b> Mira</a></span>
+      <span class="sides"><a href="#side-b"><b>B</b> Nova</a></span>
+      <span class="sides"><a href="#side-c"><b>C</b> Layla</a></span>
+      <span class="sides"><a href="#side-d"><b>D</b> Lofi</a></span>
+      <a href="https://www.youtube.com/@vibecraftstudiosofficial" rel="noopener">YouTube ↗</a>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>vibecraftstudios</h1>
-      <p>An AI anime music channel with three virtual artists. New tracks every Monday, Wednesday and Friday at 18:30 CET, lofi instrumentals on Sundays.</p>
-      <a class="button" href="https://www.youtube.com/@vibecraftstudiosofficial">Listen on YouTube</a>
+  <main>
+    <section class="hero" data-side="hero" aria-labelledby="hero-title">
+      <p class="kicker">Independent anime music · <span>made in Germany</span></p>
+      <h1 class="display" id="hero-title">
+        <span class="line"><span>Three voices.</span></span>
+        <span class="line"><span class="ghost">Four sides.</span></span>
+        <span class="line"><span>One record.</span></span>
+      </h1>
+      <div class="intro">
+        <p>Our artists are virtual and the songs are made with AI tools. The ears, the edits and the taste are human. A new side drops every Monday, Wednesday, Friday and Sunday at 18:30 CET.</p>
+        <a class="needle" href="#side-a"><i></i>Drop the needle</a>
+      </div>
     </section>
 
-    <section aria-labelledby="artists">
-      <h2 id="artists">The artists</h2>
-      <p class="lead">Three voices, three sounds.</p>
-      <div class="grid">
-        <article class="card" style="--c: var(--mira)">
-          <h3>Mira Nyx</h3>
-          <p class="meta">Progressive Trance · Monday</p>
-          <p>Mysterious, nocturnal, a siren voice. Long builds, mantra hooks, the feeling of a journey.</p>
-        </article>
-        <article class="card" style="--c: var(--nova)">
-          <h3>Nova Jade</h3>
-          <p class="meta">Slap House · Wednesday</p>
-          <p>Cyberpunk queen energy. Punchy lines, heavy bass stabs, drops that hit like statements.</p>
-        </article>
-        <article class="card" style="--c: var(--layla)">
-          <h3>Layla Star</h3>
-          <p class="meta">Dance Pop · Friday</p>
-          <p>Sweet, catchy, a little chaotic. Summer, crushes and hooks you can't stop singing.</p>
-        </article>
-        <article class="card" style="--c: var(--lofi)">
-          <h3>Sunday Lofi</h3>
-          <p class="meta">Instrumental · Sunday</p>
-          <p>Lofi hip hop, chill trap, chillhop and more. Beats to game and chill to.</p>
-        </article>
+    <section class="side right" id="side-a" data-side="a" style="--c: var(--side-a)" aria-labelledby="a-title">
+      <div class="inner">
+        <p class="letter">Side A · Monday</p>
+        <h2 class="display" id="a-title">Mira <em>Nyx</em></h2>
+        <p class="genre">Progressive Trance</p>
+        <p class="copy">Music for the hour after midnight. Long builds, siren hooks that repeat until they mean something new, and drops that feel like the road finally opens up.</p>
+        <dl class="specs">
+          <div><dt>Tempo</dt><dd>122–138 BPM</dd></div>
+          <div><dt>Mood</dt><dd>nocturnal, bittersweet</dd></div>
+          <div><dt>Drop</dt><dd>Mon 18:30</dd></div>
+        </dl>
       </div>
+    </section>
+
+    <section class="side" id="side-b" data-side="b" style="--c: var(--side-b)" aria-labelledby="b-title">
+      <div class="inner">
+        <p class="letter">Side B · Wednesday</p>
+        <h2 class="display" id="b-title">Nova <em>Jade</em></h2>
+        <p class="genre">Slap House</p>
+        <p class="copy">Chrome, neon and a raised eyebrow. Short lines on the beat, a bassline that slaps back and drops that say exactly what she means. No ballads, no apologies.</p>
+        <dl class="specs">
+          <div><dt>Tempo</dt><dd>120–126 BPM</dd></div>
+          <div><dt>Mood</dt><dd>cocky, cyberpunk</dd></div>
+          <div><dt>Drop</dt><dd>Wed 18:30</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="side right" id="side-c" data-side="c" style="--c: var(--side-c)" aria-labelledby="c-title">
+      <div class="inner">
+        <p class="letter">Side C · Friday</p>
+        <h2 class="display" id="c-title">Layla <em>Star</em></h2>
+        <p class="genre">Dance Pop</p>
+        <p class="copy">Crushes, summer nights and reading the same text message eleven times. Sweet, catchy and a little dramatic, with choruses you'll catch yourself humming on Monday.</p>
+        <dl class="specs">
+          <div><dt>Tempo</dt><dd>118–130 BPM</dd></div>
+          <div><dt>Mood</dt><dd>bright, bubbly</dd></div>
+          <div><dt>Drop</dt><dd>Fri 18:30</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="side" id="side-d" data-side="d" style="--c: var(--side-d)" aria-labelledby="d-title">
+      <div class="inner">
+        <p class="letter">Side D · Sunday</p>
+        <h2 class="display" id="d-title">Sunday <em>Lofi</em></h2>
+        <p class="genre">Instrumental, rotating styles</p>
+        <p class="copy">No vocals, no pressure. Lofi hip hop, chill trap, chillhop, dreamwave and soft lofi house – one track a week to game, study or wind down to.</p>
+        <dl class="specs">
+          <div><dt>Tempo</dt><dd>70–122 BPM</dd></div>
+          <div><dt>Mood</dt><dd>cozy, steady</dd></div>
+          <div><dt>Drop</dt><dd>Sun 18:30</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="rotation" data-side="rotation" aria-labelledby="rot-title">
+      <p class="kicker">The rotation · Europe/Berlin</p>
+      <h2 class="display" id="rot-title">Every week</h2>
+      <p class="next" id="next-drop" aria-live="polite"></p>
+      <ol class="week" id="week">
+        <li data-wd="1" style="--c: var(--side-a)"><span class="day">Mon</span><span class="slot"><b>Side A</b><span>Mira Nyx · 18:30</span></span></li>
+        <li data-wd="2" class="off"><span class="day">Tue</span><span class="slot">–</span></li>
+        <li data-wd="3" style="--c: var(--side-b)"><span class="day">Wed</span><span class="slot"><b>Side B</b><span>Nova Jade · 18:30</span></span></li>
+        <li data-wd="4" class="off"><span class="day">Thu</span><span class="slot">–</span></li>
+        <li data-wd="5" style="--c: var(--side-c)"><span class="day">Fri</span><span class="slot"><b>Side C</b><span>Layla Star · 18:30</span></span></li>
+        <li data-wd="6" class="off"><span class="day">Sat</span><span class="slot">–</span></li>
+        <li data-wd="0" style="--c: var(--side-d)"><span class="day">Sun</span><span class="slot"><b>Side D</b><span>Lofi · 18:30</span></span></li>
+      </ol>
+      <p style="margin-top: 40px"><a class="button" href="https://www.youtube.com/@vibecraftstudiosofficial" rel="noopener">Listen on YouTube ↗</a></p>
     </section>
   </main>
 
-  <footer class="site">
-    <div class="wrap">
+  <footer class="foot">
+    <p class="big" aria-hidden="true">vibecraftstudios</p>
+    <div class="row">
+      <span>Music and visuals are made with AI tools. Mira Nyx, Nova Jade and Layla Star are virtual artists.</span>
       <nav aria-label="Legal">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz / Privacy</a>
-        <a href="https://www.youtube.com/@vibecraftstudiosofficial">YouTube</a>
+        <a href="https://www.youtube.com/@vibecraftstudiosofficial" rel="noopener">YouTube</a>
       </nav>
-      <div>All music and visuals on this channel are created with AI-driven tools.</div>
     </div>
   </footer>
+
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>

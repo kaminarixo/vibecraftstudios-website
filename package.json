@@ -1,0 +1,12 @@
+{
+  "name": "vibecraftstudios-website",
+  "private": true,
+  "description": "Website vibecraftstudios.de – statisch, GitHub Pages",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --format=esm --target=es2020 --outfile=js/app.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "three": "^0.187.0"
+  }
+}
