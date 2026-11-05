@@ -1,0 +1,84 @@
+/* vibecraftstudios – schlichtes, schnelles Layout ohne externe Ressourcen */
+:root {
+  --bg: #0b0a14;
+  --surface: #151324;
+  --text: #ece9f7;
+  --muted: #a7a2bf;
+  --line: #2a2640;
+  --accent: #c58bff;
+  --mira: #6f7bff;
+  --nova: #2fd1a0;
+  --layla: #ff8fc8;
+  --lofi: #f2c46d;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a { color: var(--accent); }
+a:focus-visible, .button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+header.site { padding: 28px 0; }
+header.site a.brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .02em; }
+
+.hero { padding: 56px 0 40px; }
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  background: linear-gradient(90deg, var(--mira), var(--accent) 45%, var(--layla) 75%, var(--nova));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p { margin: 0 0 28px; max-width: 46ch; color: var(--muted); font-size: 1.1rem; }
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { background: #fff; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin: 24px 0 56px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--c, var(--accent));
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.card h3 { margin: 0 0 4px; font-size: 1.15rem; }
+.card .meta { margin: 0 0 10px; color: var(--c, var(--accent)); font-size: .9rem; font-weight: 600; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+h2 { font-size: 1.4rem; margin: 0 0 4px; }
+.lead { color: var(--muted); margin: 0; }
+
+.legal { padding: 24px 0 64px; max-width: 72ch; }
+.legal h1 { font-size: 2rem; margin: 16px 0 24px; }
+.legal h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+.legal p, .legal li { color: #d4d0e6; }
+.legal address { font-style: normal; }
+
+footer.site { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: .9rem; }
+footer.site nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 8px; }
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--text); }
