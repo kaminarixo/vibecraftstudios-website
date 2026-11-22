@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="neon" x1="12%" y1="14%" x2="88%" y2="86%">
+      <stop offset="0%" stop-color="#19f5ff"/>
+      <stop offset="48%" stop-color="#5d7bff"/>
+      <stop offset="100%" stop-color="#f22eff"/>
+    </linearGradient>
+    <linearGradient id="neonBright" x1="10%" y1="15%" x2="90%" y2="85%">
+      <stop offset="0%" stop-color="#a8fcff"/>
+      <stop offset="50%" stop-color="#d2d4ff"/>
+      <stop offset="100%" stop-color="#ffb0ff"/>
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#19f5ff" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#19f5ff"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="82%" stop-color="#f22eff"/>
+      <stop offset="100%" stop-color="#f22eff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bgGlowCyan" cx="28%" cy="26%" r="55%">
+      <stop offset="0%" stop-color="#19f5ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#07070d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlowMag" cx="74%" cy="74%" r="55%">
+      <stop offset="0%" stop-color="#f22eff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#07070d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowTight" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dunkler Badge-Grund mit sanftem Cyan/Magenta-Schimmer -->
+  <circle cx="256" cy="256" r="232" fill="#08080f"/>
+  <circle cx="256" cy="256" r="232" fill="url(#bgGlowCyan)"/>
+  <circle cx="256" cy="256" r="232" fill="url(#bgGlowMag)"/>
+
+  <!-- Äußerer Neon-Ring -->
+  <circle cx="256" cy="256" r="214" fill="none" stroke="url(#neon)" stroke-width="11" filter="url(#glowSoft)"/>
+  <circle cx="256" cy="256" r="214" fill="none" stroke="url(#neonBright)" stroke-width="3" opacity="0.85"/>
+
+  <!-- Equalizer-Balken seitlich am unteren V-Körper (wie im Original) -->
+  <g stroke="url(#neon)" stroke-width="4.5" stroke-linecap="round" filter="url(#glowTight)" opacity="0.88">
+    <line x1="158" y1="296" x2="158" y2="310"/>
+    <line x1="170" y1="286" x2="170" y2="310"/>
+    <line x1="182" y1="274" x2="182" y2="310"/>
+    <line x1="194" y1="258" x2="194" y2="310"/>
+    <line x1="206" y1="242" x2="206" y2="310"/>
+    <line x1="218" y1="256" x2="218" y2="310"/>
+    <line x1="294" y1="256" x2="294" y2="310"/>
+    <line x1="306" y1="242" x2="306" y2="310"/>
+    <line x1="318" y1="258" x2="318" y2="310"/>
+    <line x1="330" y1="274" x2="330" y2="310"/>
+    <line x1="342" y1="286" x2="342" y2="310"/>
+    <line x1="354" y1="296" x2="354" y2="310"/>
+  </g>
+
+  <!-- Haupt-V-Monogramm (doppelwandige hohle Neon-Chevron) -->
+  <g filter="url(#glowSoft)">
+    <polygon points="116,122 158,122 256,274 354,122 396,122 256,332"
+             fill="#0a0914" stroke="url(#neon)" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="116,122 158,122 256,274 354,122 396,122 256,332"
+             fill="none" stroke="url(#neonBright)" stroke-width="2.6" stroke-linejoin="round" opacity="0.9"/>
+  </g>
+
+  <!-- Inneres schwebendes V-Chevron -->
+  <g filter="url(#glowTight)">
+    <polygon points="186,124 218,124 256,184 294,124 326,124 256,232"
+             fill="#0a0914" stroke="url(#neon)" stroke-width="7.5" stroke-linejoin="round"/>
+    <polygon points="186,124 218,124 256,184 294,124 326,124 256,232"
+             fill="none" stroke="url(#neonBright)" stroke-width="2.2" stroke-linejoin="round" opacity="0.9"/>
+  </g>
+
+  <!-- Horizontale Audio-Wellenform -->
+  <g filter="url(#glowTight)">
+    <path d="M96,314 L152,314 L164,306 L176,322 L190,296 L204,332 L218,284 L232,340 L246,274 L256,348 L266,274 L280,340 L294,284 L308,332 L322,296 L336,322 L348,306 L360,314 L416,314"
+          fill="none" stroke="url(#neon)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M96,314 L152,314 L164,306 L176,322 L190,296 L204,332 L218,284 L232,340 L246,274 L256,348 L266,274 L280,340 L294,284 L308,332 L322,296 L336,322 L348,306 L360,314 L416,314"
+          fill="none" stroke="url(#waveGrad)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Schriftzug VIBECRAFT / STUDIOS als geometrische Vektor-Pfade (font-unabhängig) -->
+  <g fill="none" stroke="#e9f4ff" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowTight)">
+    <!-- V I B E C R A F T  (zentriert bei x=256, y=362..390) -->
+    <!-- V -->
+    <path d="M124,362 L134,390 L144,362"/>
+    <!-- I -->
+    <path d="M158,362 L158,390"/>
+    <!-- B -->
+    <path d="M172,362 L172,390 M172,362 L185,362 C192,362 192,375 184,375 L172,375 M172,375 L186,375 C194,375 194,390 185,390 L172,390"/>
+    <!-- E -->
+    <path d="M222,362 L205,362 L205,390 L222,390 M205,376 L219,376"/>
+    <!-- C -->
+    <path d="M254,366 C250,362 241,361 236,366 C231,371 231,381 236,386 C241,391 250,390 254,386"/>
+    <!-- R -->
+    <path d="M267,390 L267,362 L281,362 C288,362 288,376 280,376 L267,376 M279,376 L288,390"/>
+    <!-- A -->
+    <path d="M298,390 L309,362 L320,390 M302,381 L316,381"/>
+    <!-- F -->
+    <path d="M350,362 L333,362 L333,390 M333,376 L346,376"/>
+    <!-- T -->
+    <path d="M361,362 L385,362 M373,362 L373,390"/>
+  </g>
+
+  <!-- STUDIOS (kleiner, weit gesperrt, y=406..420) -->
+  <g fill="none" stroke="#9fd8ff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <!-- S -->
+    <path d="M188,408 C185,405 178,405 178,410 C178,414 189,412 189,417 C189,422 180,422 177,419"/>
+    <!-- T -->
+    <path d="M201,406 L213,406 M207,406 L207,421"/>
+    <!-- U -->
+    <path d="M225,406 L225,416 C225,421 236,421 236,416 L236,406"/>
+    <!-- D -->
+    <path d="M249,406 L249,421 L255,421 C262,421 262,406 255,406 Z"/>
+    <!-- I -->
+    <path d="M273,406 L273,421"/>
+    <!-- O -->
+    <ellipse cx="292" cy="413.5" rx="6.5" ry="7.5"/>
+    <!-- S -->
+    <path d="M321,408 C318,405 311,405 311,410 C311,414 322,412 322,417 C322,422 313,422 310,419"/>
+  </g>
+</svg>

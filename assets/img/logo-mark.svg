@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="n" x1="12%" y1="14%" x2="88%" y2="86%">
+      <stop offset="0%" stop-color="#19f5ff"/>
+      <stop offset="50%" stop-color="#6b7dff"/>
+      <stop offset="100%" stop-color="#f22eff"/>
+    </linearGradient>
+    <linearGradient id="nb" x1="10%" y1="15%" x2="90%" y2="85%">
+      <stop offset="0%" stop-color="#b8fdff"/>
+      <stop offset="100%" stop-color="#ffc2ff"/>
+    </linearGradient>
+    <filter id="g" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="64" cy="64" r="58" fill="#090910"/>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="url(#n)" stroke-width="5" filter="url(#g)"/>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="url(#nb)" stroke-width="1.4" opacity="0.85"/>
+  <!-- Equalizer -->
+  <g stroke="url(#n)" stroke-width="2.4" stroke-linecap="round" opacity="0.85">
+    <line x1="46" y1="82" x2="46" y2="90"/>
+    <line x1="52" y1="74" x2="52" y2="90"/>
+    <line x1="58" y1="68" x2="58" y2="90"/>
+    <line x1="64" y1="64" x2="64" y2="90"/>
+    <line x1="70" y1="68" x2="70" y2="90"/>
+    <line x1="76" y1="74" x2="76" y2="90"/>
+    <line x1="82" y1="82" x2="82" y2="90"/>
+  </g>
+  <!-- Double V -->
+  <polygon points="27,32 40,32 64,74 88,32 101,32 64,95" fill="#0a0914" stroke="url(#n)" stroke-width="3.8" stroke-linejoin="round" filter="url(#g)"/>
+  <polygon points="46,33 55,33 64,49 73,33 82,33 64,63" fill="#0a0914" stroke="url(#n)" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Waveform -->
+  <path d="M22,90 L42,90 L48,84 L54,96 L60,78 L64,102 L68,78 L74,96 L80,84 L86,90 L106,90"
+        fill="none" stroke="url(#nb)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#g)"/>
+</svg>

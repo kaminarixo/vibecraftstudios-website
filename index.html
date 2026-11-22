@@ -16,17 +16,23 @@
 
   <header class="bar">
     <a class="mark" href="/" aria-label="vibecraftstudios – start">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#1b1916"/><circle cx="32" cy="32" r="22" fill="none" stroke="#3a3631" stroke-width="1.5"/><circle cx="32" cy="32" r="11" fill="currentColor" style="color: var(--accent)"/><circle cx="32" cy="32" r="2.4" fill="#0d0c0b"/></svg>
+      <img src="assets/img/logo-mark.svg" alt="" width="28" height="28" aria-hidden="true">
       vibecraftstudios
     </a>
     <nav aria-label="Sections">
-      <span class="sides"><a href="#side-a"><b>A</b> Mira</a></span>
-      <span class="sides"><a href="#side-b"><b>B</b> Nova</a></span>
-      <span class="sides"><a href="#side-c"><b>C</b> Layla</a></span>
-      <span class="sides"><a href="#side-d"><b>D</b> Lofi</a></span>
+      <span class="sides"><a href="#side-a" data-nav="a"><b>A</b> Mira</a></span>
+      <span class="sides"><a href="#side-b" data-nav="b"><b>B</b> Nova</a></span>
+      <span class="sides"><a href="#side-c" data-nav="c"><b>C</b> Layla</a></span>
+      <span class="sides"><a href="#side-d" data-nav="d"><b>D</b> Lofi</a></span>
       <a href="https://www.youtube.com/@vibecraftstudiosofficial" rel="noopener">YouTube ↗</a>
     </nav>
   </header>
+
+  <button class="now-playing" id="now-playing" type="button" hidden aria-label="Stop audio preview">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="np-title" id="np-title"></span>
+    <span class="np-stop">Stop</span>
+  </button>
 
   <main>
     <section class="hero" data-side="hero" aria-labelledby="hero-title">
@@ -53,6 +59,14 @@
           <div><dt>Mood</dt><dd>nocturnal, bittersweet</dd></div>
           <div><dt>Drop</dt><dd>Mon 18:30</dd></div>
         </dl>
+        <div class="preview">
+          <button class="play-btn" type="button" data-preview="a" aria-pressed="false">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="play-text"><small>Preview</small><strong>Windows Up</strong></span>
+            <span class="play-time">0:18</span>
+          </button>
+          <div class="play-bar" aria-hidden="true"><i></i></div>
+        </div>
       </div>
     </section>
 
@@ -67,6 +81,14 @@
           <div><dt>Mood</dt><dd>cocky, cyberpunk</dd></div>
           <div><dt>Drop</dt><dd>Wed 18:30</dd></div>
         </dl>
+        <div class="preview">
+          <button class="play-btn" type="button" data-preview="b" aria-pressed="false">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="play-text"><small>Preview</small><strong>Don't Make It a Thing</strong></span>
+            <span class="play-time">0:17</span>
+          </button>
+          <div class="play-bar" aria-hidden="true"><i></i></div>
+        </div>
       </div>
     </section>
 
@@ -81,6 +103,14 @@
           <div><dt>Mood</dt><dd>bright, bubbly</dd></div>
           <div><dt>Drop</dt><dd>Fri 18:30</dd></div>
         </dl>
+        <div class="preview">
+          <button class="play-btn" type="button" data-preview="c" aria-pressed="false">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="play-text"><small>Preview</small><strong>Secondhand Crush</strong></span>
+            <span class="play-time">0:18</span>
+          </button>
+          <div class="play-bar" aria-hidden="true"><i></i></div>
+        </div>
       </div>
     </section>
 
